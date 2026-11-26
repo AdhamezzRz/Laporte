@@ -31,3 +31,20 @@ python3 posts.py && node shoot.js posts.html <outDir> .post 1
 python3 reel.py && node reel_render.js reel.html <framesDir> 30   # then ffmpeg (see commit notes)
 python3 identity.py && node render.js identity.html ../02_Brand_Identity/ALaPorte_Brand_Identity.pdf
 ```
+
+---
+
+## December content (final identity)
+The client's approved visual identity (logo option 1 · `#3b000c` `#550b18` `#76152d` `#f2e5c5` · Cormorant Garamond, Acumin, Vladimir Script) drives `04_December_Content/`:
+
+| File | Post |
+|---|---|
+| `Post1_Animated_Reel_A-Little-Something_1080x1920.mp4` (+ `_Feed_1080x1350.mp4`, cover) | The bell: "A little something is changing." |
+| `Post2_Let-The-Good-Bites-Begin_1080x1350.png` | Platter on solid background |
+| `Post3_Hello-December_1080x1350.png` | Platter background + card |
+| `Post4_Little-Things-Delicious_1080x1350.png` | Quote on solid background |
+| `Post5_Festive-Moment_1080x1350.png` | Platter on a festive table |
+| `Post6_Christmas-A-Little-Tastier_1080x1350.png` | A gift, hand to hand |
+| `ALaPorte_December_Content_Presentation.pdf` | Each post with its brief, idea and caption |
+
+All food is the client's own photography (cut-outs, crops, gentle grade). Higgsfield was used only for the bell shot, the empty Christmas table, the gift hands, background removal and upscaling. Sources: `source/v2/`.

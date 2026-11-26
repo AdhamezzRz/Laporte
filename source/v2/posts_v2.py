@@ -8,7 +8,7 @@ def p2():
     return f'''<div class="post" id="post2" style="background:radial-gradient(ellipse 90% 80% at 62% 55%, {WI} 0%, {BU} 45%, {OX} 100%)">
   <div class="abs" style="left:250px;top:430px;width:960px;height:640px;border:1.6px solid {CR}66;border-radius:50%;transform:rotate(-20deg)"></div>
   <div class="abs" style="left:230px;top:380px;width:960px;height:640px;border-radius:50%;overflow:hidden;transform:rotate(-27deg);box-shadow:0 50px 90px rgba(20,0,4,.55)">
-    <img src="{A}tray_2k.jpg" style="position:absolute;left:-60px;top:-40px;width:1080px;height:720px;object-fit:cover;transform:rotate(27deg) scale(1.22)">
+    <img src="{A}heart.jpg" style="position:absolute;left:-57px;top:-67px;width:1040px;height:1150px;object-fit:cover;transform-origin:537px 387px;transform:rotate(27deg) scale(1.3)">
   </div>
   <div class="abs cb" style="left:70px;top:96px;color:{CR};font-size:152px">LET THE<br>GOOD<br>BITES</div>
   <div class="abs script" style="left:520px;top:960px;color:{CR};font-size:270px;transform:rotate(-7deg);text-shadow:0 10px 30px rgba(30,0,6,.45)">begin</div>

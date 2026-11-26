@@ -7,7 +7,7 @@ POSTS = [
   'A white-gloved maître d’ rings the service bell; “A little something is changing.” writes itself in Vladimir Script, then the new logo is revealed. 12 s, sound on.'),
  ('02', 'Post2_Let-The-Good-Bites-Begin_1080x1350.png', False, 'Platter on a solid background', 'Let the good bites begin',
   'The little bites that make every gathering a little more special. ♡<br>Made to share, made to enjoy, and always made with love.', '#ALaPorte #ALaPortePlatters',
-  'The real tray in a tilted oval on burgundy, editorial Cormorant capitals, and “begin” in the brand script.'),
+  'The client’s heart-shaped platter in a tilted oval on burgundy, framed on the salami and grapefruit roses; editorial Cormorant capitals and “begin” in the brand script.'),
  ('03', 'Post3_Hello-December_1080x1350.png', False, 'Platter background · text in a box', 'Making December a little more delightful',
   'There’s something about December that makes every gathering feel a little more special. More moments to share, more reasons to gather, and always room for a little something delicious. ♡', '#ALaPorte #ALaPortePlatters',
   'A real platter close-up full-bleed under a soft burgundy overlay; a cream card with a “search bar” that types the line.'),

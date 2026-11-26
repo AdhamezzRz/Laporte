@@ -60,3 +60,4 @@ All food is the client's own photography (cut-outs, crops, gentle grade). Higgsf
 - `ALaPorte_ButterPaper_30x40cm.pdf`, `ALaPorte_ButterPaper_40x50cm.pdf`: one-ink (burgundy) pattern for translucent greaseproof paper, no background fill: full logo, "à la porte", "bon appétit", "merci ♡" with sparkle/heart/dot accents (no standalone hand icon).
 - `ALaPorte_Social_Card_85x55mm.pdf`: p1 front · p2 back with Instagram QR (ready now) · p3 back with Instagram + Facebook (Facebook slot pending). CMYK, 3 mm bleed. QR codes verified by decoding.
 - To add Facebook: set `SOCIAL['facebook']` in `source/v2/print_extras.py` and run `python3 print_extras.py`.
+- `ALaPorte_Social_Card_Served_55x85mm.pdf`: **final card (concept A "Served")**, 55 × 85 mm portrait, CMYK, 3 mm bleed. p1 front, p2 back. Single QR → `https://kliktick.com/a-la-porte` (redrawn as vector in burgundy #550b18 / C25 M100 Y78 K50, decode-verified). Source: `source/v2/card_served.py`.

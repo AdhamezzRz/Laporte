@@ -92,17 +92,21 @@ def dots(c, cx, cy, color, r=0.55 * mm, rot=0):
     c.restoreState()
 
 # ---------------- butter paper ----------------
-def motif(c, k, x, y, rot):
-    if k == 0: logo(c, 'icon', x, y, 26 * mm, BURG, rot)
-    elif k == 1: script(c, 'à la porte', x, y, 30, BURG, rot)
-    elif k == 2:
-        doodle(c, SPARKLE, x - 3 * mm, y + 2 * mm, 9 * mm, BURG, 0.9, rot=rot)
-        doodle(c, SPARKLE, x + 5 * mm, y - 4 * mm, 4.5 * mm, BURG, 0.8, rot=rot)
-    elif k == 3: logo(c, 'full', x, y, 19 * mm, BURG, rot)
-    elif k == 4: script(c, 'bon appétit', x, y, 26, BURG, rot)
-    elif k == 5:
-        doodle(c, HEART, x, y, 7.5 * mm, BURG, 0.9, box=(0, 0, 100, 90), rot=rot)
-        dots(c, x, y - 7 * mm, BURG, rot=rot)
+def major(c, k, x, y, rot):
+    if k == 0: logo(c, 'full', x, y, 17 * mm, BURG, rot)
+    elif k == 1: script(c, 'à la porte', x, y, 29, BURG, rot)
+    elif k == 2: script(c, 'bon appétit', x, y, 25, BURG, rot)
+    elif k == 3:
+        script(c, 'merci', x - 2 * mm, y, 30, BURG, rot)
+        doodle(c, HEART, x + 11 * mm, y + 3.5 * mm, 4 * mm, BURG, 0.7, box=(0, 0, 100, 90), rot=rot)
+
+def filler(c, k, x, y, rot):
+    if k == 0:
+        doodle(c, SPARKLE, x, y, 5.5 * mm, BURG, 0.75, rot=rot)
+        doodle(c, SPARKLE, x + 4.5 * mm, y - 3.5 * mm, 2.6 * mm, BURG, 0.6, rot=rot)
+    elif k == 1: doodle(c, HEART, x, y, 4.2 * mm, BURG, 0.7, box=(0, 0, 100, 90), rot=rot)
+    elif k == 2: dots(c, x, y, BURG, r=0.5 * mm, rot=rot)
+    elif k == 3: doodle(c, SPARKLE, x, y, 3.6 * mm, BURG, 0.65, rot=rot)
 
 def butter_paper(w_cm, h_cm):
     W, H = w_cm * 10 * mm, h_cm * 10 * mm
@@ -110,15 +114,16 @@ def butter_paper(w_cm, h_cm):
     c = canvas.Canvas(path, pagesize=(W, H))
     c.setTitle(f'À La Porte butter paper {w_cm}×{h_cm} cm'); c.setAuthor('À La Porte')
     c.setSubject('One ink: burgundy (C25 M100 Y78 K50 / or Pantone match). No background: prints on translucent greaseproof paper.')
-    rnd = random.Random(7)
-    cell = 46 * mm; cols = int(W / cell) + 3; rows = int(H / (cell * 0.72)) + 3
-    order = [0, 1, 2, 3, 4, 5]
+    rnd = random.Random(11)
+    cw, rh = 54 * mm, 36 * mm                       # half-drop lattice
+    cols = int(W / cw) + 3; rows = int(H / rh) + 3
+    seq = [0, 1, 2, 0, 3, 1, 0, 2, 3]
     for r in range(-1, rows):
         for col in range(-1, cols):
-            x = col * cell + (cell / 2 if r % 2 else 0) + rnd.uniform(-4, 4) * mm
-            y = r * cell * 0.72 + rnd.uniform(-3, 3) * mm
-            k = order[(col + r * 4 + (r // 2)) % len(order)]
-            motif(c, k, x, y, rnd.uniform(-16, 16))
+            x = col * cw + (cw / 2 if r % 2 else 0)
+            y = r * rh
+            major(c, seq[(col * 2 + r * 5) % len(seq)], x + rnd.uniform(-1.5, 1.5) * mm, y + rnd.uniform(-1.5, 1.5) * mm, rnd.uniform(-8, 8))
+            filler(c, (col + r * 2) % 4, x + cw / 2, y + rnd.uniform(-2, 2) * mm, rnd.uniform(-15, 15))
     c.showPage(); c.save(); return path
 
 # ---------------- social card ----------------
@@ -192,4 +197,4 @@ def social_card():
     c.save(); return path
 
 if __name__ == '__main__':
-    for p in (butter_paper(30, 40), butter_paper(40, 50), social_card()): print(os.path.normpath(p))
+    for p in (butter_paper(30, 40), butter_paper(40, 50)): print(os.path.normpath(p))

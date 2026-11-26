@@ -57,6 +57,6 @@ All food is the client's own photography (cut-outs, crops, gentle grade). Higgsf
 
 ## Butter paper & social card (print)
 `06_Print_Pattern_Card/`:
-- `ALaPorte_ButterPaper_30x40cm.pdf`, `ALaPorte_ButterPaper_40x50cm.pdf`: one-ink (burgundy) pattern for translucent greaseproof paper, no background fill.
+- `ALaPorte_ButterPaper_30x40cm.pdf`, `ALaPorte_ButterPaper_40x50cm.pdf`: one-ink (burgundy) pattern for translucent greaseproof paper, no background fill: full logo, "à la porte", "bon appétit", "merci ♡" with sparkle/heart/dot accents (no standalone hand icon).
 - `ALaPorte_Social_Card_85x55mm.pdf`: p1 front · p2 back with Instagram QR (ready now) · p3 back with Instagram + Facebook (Facebook slot pending). CMYK, 3 mm bleed. QR codes verified by decoding.
 - To add Facebook: set `SOCIAL['facebook']` in `source/v2/print_extras.py` and run `python3 print_extras.py`.

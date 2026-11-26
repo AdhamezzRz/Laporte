@@ -54,3 +54,9 @@ All food is the client's own photography (cut-outs, crops, gentle grade). Higgsf
 - `ALaPorte_Sticker_40mm_Round.pdf` / `ALaPorte_Sticker_60mm_Round.pdf`: one sticker per page (burgundy, then cream), TrimBox = sticker, BleedBox = +3 mm.
 - `ALaPorte_Sticker_Sheets_A4.pdf`: A4 gang sheets: 24 × 40 mm or 12 × 60 mm per sheet, each in both colourways.
 - CMYK: burgundy C25 M100 Y78 K50, cream C4 M9 Y25 K0. Ask the printer for a proof.
+
+## Butter paper & social card (print)
+`06_Print_Pattern_Card/`:
+- `ALaPorte_ButterPaper_30x40cm.pdf`, `ALaPorte_ButterPaper_40x50cm.pdf`: one-ink (burgundy) pattern for translucent greaseproof paper, no background fill.
+- `ALaPorte_Social_Card_85x55mm.pdf`: p1 front · p2 back with Instagram QR (ready now) · p3 back with Instagram + Facebook (Facebook slot pending). CMYK, 3 mm bleed. QR codes verified by decoding.
+- To add Facebook: set `SOCIAL['facebook']` in `source/v2/print_extras.py` and run `python3 print_extras.py`.
